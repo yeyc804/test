@@ -1,0 +1,19 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: hello
+spec:
+  template:
+    metadata:
+      name: hello-word
+    spec:
+      containers:
+        - name: container
+          image: registry.cn-hangzhou.aliyuncs.com/yeyc/test2:1
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: TAGET
+              value: "World"
+          ports:
+            - name: metrics
+              containerPort: 8080
