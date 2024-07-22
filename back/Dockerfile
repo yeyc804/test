@@ -1,5 +1,5 @@
 #use the latest LTS (long term support) version 12 of node available from the Docker Hub
-FROM node20
+FROM node:12
 # Create app directory
 WORKDIR usrsrcapp
 # Install app dependencies
