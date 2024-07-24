@@ -7,7 +7,7 @@ const app = express();
  
 app.get('/', async (req, res) => {
   try {
-    const response = await axios.get('http://localhost:18082/api/data');
+    const response = await axios.get('http://10.233.11.207:18082/api/data');
     res.send(response.data);
   } catch (error) {
     res.status(500).send('服务器错误');
